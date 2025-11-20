@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookalbum
+  name: book
   labels:
-    app: bookalbum
+    app: book
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bookalbum
+      app: book
   template:
     metadata:
       labels:
-        app: bookalbum
+        app: book
     spec:
       containers:
-      - name: bookalbum
+      - name: book
         image: gaganahs/phpapp:latest
         ports:
         - containerPort: 80
